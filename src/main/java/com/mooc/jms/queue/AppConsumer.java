@@ -13,7 +13,7 @@ import javax.jms.*;
  */
 public class AppConsumer {
 
-    private static String url="tcp://192.168.227.131:61616";
+    private static String url="failover:(tcp://192.168.137.8:61616,tcp://192.168.137.8:61617,tcp://192.168.137.8:61618)?randomize=true";
     private static String queueName="queue_test";
 
     public static void main(String[] args) {
